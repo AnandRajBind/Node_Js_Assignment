@@ -1,0 +1,20 @@
+const EventEmiter=require("events");
+
+const eventEmiter=new EventEmiter();
+
+const subscribeMessage =(channelName)=>{
+console.log(`Thanks for subscribing ${channelName}`);
+}
+
+eventEmiter.addListener("subscribe", subscribeMessage);
+
+console.log("calling event listner before removing the event");
+eventEmiter.emit("subscribe", "college wallah");
+
+
+console.log("calling event listner before removing the event");
+eventEmiter.removeListener("subscribe", subscribeMessage);
+
+eventEmiter.emit("subscribe", "college wallah");
+
+
