@@ -1,0 +1,22 @@
+const http=require("http");
+
+const server=http.createServer( (req, res)=>{
+
+    if(req.url === "/"){
+res.write(" <h1>I am become happy to learn Full Stack web development from pw skills </h>"
+);
+}
+res.end();
+});
+
+server.listen(5000);
+
+console.log("server running on the port number 5000");
+
+
+
+
+
+output: 
+
+I am become happy to learn Full Stack web development from pw skills
