@@ -1,0 +1,19 @@
+const EventEmiter=require("events")
+const eventEmiter=new EventEmiter();
+
+const subscribeMessage =(channelName)=>{
+
+    console.log(`Thanks for Subscribing my channel ${channelName}`);
+}
+
+eventEmiter.addListener("subscribe", subscribeMessage);
+eventEmiter.emit("subscribe", "college wallah");
+
+console.log(`The default maximum number of event listner are: ${eventEmiter.getMaxListeners()}`)
+eventEmiter.setMaxListeners(5);
+
+console.log(
+    `The update maximum number of event listner are: ${
+        eventEmiter.getMaxListeners()
+    }`
+)
