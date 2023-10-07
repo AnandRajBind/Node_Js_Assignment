@@ -1,0 +1,6 @@
+const os= require("os");
+
+const version= os.version();
+
+console.log("operating system name is: "+ os.type());
+console.log("operating system release: "+ os.release());
