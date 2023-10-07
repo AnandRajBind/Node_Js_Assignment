@@ -1,0 +1,7 @@
+const fs= require("fs");
+
+fs.unlink("/config/workspace/Node_js_Assignment/Node_js_Architecture.txt ", ()=>
+{
+console.log("File deleted Successfully");
+}
+);
